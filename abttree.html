@@ -31,7 +31,15 @@
 });
 	</script>
  		    <li><a href="#">Tree</a></li>
-		    <li><a href="#">Leaf</a></li>
+		    <li><a href="#" id="leaf">Leaf</a></li>
+	<script>
+document.getElementById('leaf').addEventListener('click',function() {
+	document.body.classList.add('fade-out');
+	setTimeout(function(){
+	  window.location.href = 'test.html';
+}, 400);
+});
+	</script>
 		</ul>
 	    </div>
 
