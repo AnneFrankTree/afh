@@ -22,8 +22,24 @@
 		    <img src="logos4.png" class="logo">
 		<ul>
 	<li><a href="#" id="Home">Home</a></li>
+			<script>
+document.getElementById('home').addEventListener('click',function() {
+	document.body.classList.add('fade-out');
+	setTimeout(function(){
+	  window.location.href = 'index.html';
+}, 400);
+});
+	</script>
 	<li><a href="#" id="Tree">Tree</a></li>
 	<li><a href="#" id="Leaf">Leaf</a></li>
+		<script>
+document.getElementById('leaf').addEventListener('click',function() {
+	document.body.classList.add('fade-out');
+	setTimeout(function(){
+	  window.location.href = 'test.html';
+}, 400);
+});
+	</script>
 		</ul>
 	</div>
 </div>
