@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Write a Leaf to Anne Frank</title>
+  <link rel="stylesheet" href="test.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lora&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<style>
+	   body{
+		transition: opacity 0.5s ease-in-out;
+		opacity: 1;
+	}
+	.fade-out{
+		opacity: 0;
+	}
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="hero">
+		<div class="navbar">
+		    <img src="logos2.png"
+			height="120"
+			width="120"
+			style="margin-left: -140px; 
+			margin-top: -20px;">
+		    <ul>
+			<li><a href="#" id="home">Home</a></li>
+
+<script>
+	document.getElementById('home').addEventListener('click',function() {
+	document.body.classList.add('fade-out');
+	setTimeout(function(){
+	  window.location.href = 'anne.html';
+}, 400);
+});
+	</script>
+			<li><a href="#">Tree</a></li>
+			<li><a href="#" id="leaf">Leaf</a></li>
+	<script>
+document.getElementById('leaf').addEventListener('click',function() {
+	document.body.classList.add('fade-out');
+	setTimeout(function(){
+	  window.location.href = 'leaf.html';
+}, 400);
+});
+	</script>
+		    </ul>
+
+  </header>
+
+  <main class="full-page">
+    <section class="left-panel">
+      <div class="instructions">
+        <h2>Write a Message</h2>
+        <p class="quote">“I can shake off everything as I write; my sorrows disappear, my courage is reborn.” <br>    <span>— Anne Frank</span></p>
+        <ol>
+        
+     
+        <p> - Write an original message for Anne Frank on the leaf provided. <br> - Write atleast 3 sentences using all lines (no fluff or repetition). <br> - Consider the lessons you learned from Anne, her ideals and values, why she in inspirational, EGPs, etc. Be respectful and sincere! <br> - Do NOT summarize the play or Anne's experience. <br> - Make sure to flip the leaf and sign your name! Click “Send” once done.</p>
+        </ol>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="right-panel">
+      <div class="leaf-container">
+        <div id="leafCard" class="leaf-card">
+          <div class="leaf-inner">
+            <div class="leaf-front">
+              <textarea class="leaf-message" placeholder="Write your message to Anne Frank..."></textarea>
+            </div>
+            <div class="leaf-back">
+              <input type="text" class="leaf-signature" placeholder="Enter Your name..." />
+            </div>
+          </div>
+        </div>
+        <div class="button-group">
+          <button id="flipBtn">Flip Leaf</button>
+          <button id="sendBtn">Send to Tree</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+<footer>
+        <p>&copy; 2025 In Memory Of Anne Frank.</p>
+    </footer>
+
+</html>
