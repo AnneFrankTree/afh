@@ -1,11 +1,40 @@
 .thumbnail {
-  width: 100%;
-  height: 200px;
-  display: block;
+  width: 220px;
+  height: 340px;
   object-fit: cover;
-  border-radius: 8px;
-  object-position: top;
+  background: #f0e4d7;      /* Light book cover color */
+  border-radius: 12px;      /* Slight rounded corners for book-like feel */
+  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.15), inset 5px 5px 10px rgba(0, 0, 0, 0.1);  /* Deep shadow for 3D effect */
+  background: linear-gradient(45deg, 3f1d8b2, #E0C7A2);
+  border: 2px solid #d6c99c;
+  background-size: cover;
+  background-position: center;
+  position: relative;       /* Required for pseudo elements */
+  overflow: hidden;
+  transform-style: preserve-3d; /* Enable 3D effect */
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
+
+/* Hover Effect for Book-like Interaction (Tilt and Scale) */
+.thumbnail:hover {
+  transform: rotate(5deg) scale(1.05); /* Tilt effect and zoom to give a 3D feel */
+  box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.2), inset 8px 8px 15px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.thumbnail::before {
+  content: ''; /* Spine effect on the side of the book */
+  position: absolute;
+  left: -10px;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  background: #d3b79b; /* Book spine color */
+  box-shadow: 3px 0 5px rgba(0, 0, 0, 0.3); /* Shadow for the spine */
+  z-index: 1;
+  border-radius: 4px;
+}
+
 
 .video-title {
   margin-top: 0;
@@ -22,13 +51,18 @@
 
 .profile-picture {
   width: 36px;
-  border-radius: 50px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .thumbnail-row {
+  display: flex;
   margin-bottom: 8px;
   position: relative;
-  
+  justify-content: center; /* Horizontally center */
+  align-items: center;  
 }
 
 .video-author,
