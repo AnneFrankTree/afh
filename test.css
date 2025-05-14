@@ -142,7 +142,7 @@ ul li a:hover::after{
   position: absolute;
   width: 500px;
   height: 500px;;
-  background-image: url('leaf (2).png'); /* Make sure this file exists */
+  background-image: url('leaf (2).png'); 
   background-size: cover;
   background-position: center;
   backface-visibility: hidden;
@@ -150,7 +150,7 @@ ul li a:hover::after{
   align-items: center;
   justify-content: center;
   padding: 20px;
-  top: -24vh;
+  top: -20vh;
   left: -100px;
 }
 
@@ -172,7 +172,8 @@ ul li a:hover::after{
   transform: rotateY(180deg);
 }
 .button-group {
-  margin-top: 50px;
+  margin-top: 15vh;
+  margin-left: 17px;
 }
 
 button {
