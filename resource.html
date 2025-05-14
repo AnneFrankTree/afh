@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Movies and Books</title>
+    <title>Books and Movies</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
     <header class="header">
       <div class="left-section">
         <img class="hamburger-menu" src="icons/hamburger-menu.svg">
-        <img class="youtube-logo" src="icons/youtube-logo.svg">
+        <img class="youtube-logo" src="logos5.png">
       </div>
       <div class="middle-section">
         <input class="search-bar" placeholder="Movies | Switch to Books?">
@@ -32,46 +32,57 @@
       </div>
       <div class="right-section">
         <div class="upload-icon-container">
-          <img class="upload-icon" src="icons/upload.svg">
           <div class="tooltip">Create</div>
         </div>
         <div class="youtube-apps-icon-container">
           <img class="youtube-apps-icon" src="icons/youtube-apps.svg">
-          <div class="tooltip">YouTube Apps</div>
+          <div class="tooltip">Dropdown</div>
         </div>
-        <div class="notifications-icon-container">
+
+<!-- Notification Popup -->
+<div class="notifications-icon-container">
           <img class="notifications-icon" src="icons/notifications.svg">
-          <div class="notifications-count">3</div>
+          <div class="notifications-count">0</div>
           <div class="tooltip">Notifications</div>
         </div>
+
         <img class="current-user-picture" src="my-channel.png">
       </div>
     </header>
 
     <nav class="sidebar">
       <div class="sidebar-link">
-        <img src="icons/home.svg">
-        <div>Home</div>
+ <a href="index.html">       
+ <img src="icons/home.svg">
+ </a>        <div>Home</div>
+
       </div>
       <div class="sidebar-link">
-        <img src="icons/explore.svg">
-        <div>Explore</div>
+ <a href="resource2.html">
+        <img src="icons/explore.png">
+        </a> <div>Books</div>
       </div>
       <div class="sidebar-link">
-        <img src="icons/subscriptions.svg">
-        <div>Subscriptions</div>
+ <a href="treee.html">
+        <img src="icons/subscriptions.png">
+        </a> <div>Tree</div>
       </div>
       <div class="sidebar-link">
-        <img src="icons/originals.svg">
-        <div>Originals</div>
+<a href="test.html">
+        <img src="icons/originals.png">
+        </a> <div>Leaf</div>
       </div>
       <div class="sidebar-link">
-        <img src="icons/youtube-music.svg">
-        <div>YouTube Music</div>
+<a href="javascript:history.back();">
+        <img src="icons/youtube-music.png">
+</a>
+        <div>Return</div>
       </div>
       <div class="sidebar-link">
-        <img src="icons/library.svg">
-        <div>Library</div>
+<a href="https://www.annefrank.org/en/museum/">        
+<img src="icons/library.png">
+</a>
+        <div>AFH</div>
       </div>
     </nav>
 
@@ -378,5 +389,35 @@
         </div>
       </section>
     </main>
+<!-- Notification Modal -->
+<div id="notification-modal" class="notification-modal hidden">
+  <div class="modal-content">
+    <h2>NO NEW NOTIFICATIONS</h2>
+    <p>All is quiet on the tree today. No new leaves have fallen.</p>
+    <button class="close-modal">Close</button>
+  </div>
+</div>
+
+<script>
+  const bell = document.querySelector('.notifications-icon-container');
+  const modal = document.getElementById('notification-modal');
+  const closeBtn = document.querySelector('.close-modal');
+
+  bell.addEventListener('click', () => {
+    modal.classList.remove('hidden');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.classList.add('hidden');
+  });
+
+  // Optional: Close modal by clicking outside the content box
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.add('hidden');
+    }
+  });
+</script>
+
   </body>
 </html>
